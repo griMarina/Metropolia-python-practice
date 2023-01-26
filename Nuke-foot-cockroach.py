@@ -1,3 +1,5 @@
+# Chapter 7 Exercise 2: Nuke-foot-cockroach
+
 import random
 
 choice = {'': '', 'Foot': 'Cockroach', 'Nuke': 'Foot', 'Cockroach': 'Nuke'}
