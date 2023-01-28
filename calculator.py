@@ -2,6 +2,16 @@
 import math
 
 
+def get_numbers():
+    while True:
+        num = input('Give a number: ')
+        try:
+            num = int(num)
+            return num
+        except Exception:
+            print('This input is invalid.')
+
+
 def calculate(num1, num2, operation):
     if operation == 1:
         res = num1 + num2
@@ -20,9 +30,8 @@ def calculate(num1, num2, operation):
 
 def main():
     print('Calculator')
-
-    num1 = int(input('Give the first number: '))
-    num2 = int(input('Give the second number: '))
+    num1 = get_numbers()
+    num2 = get_numbers()
 
     while True:
 
@@ -33,8 +42,8 @@ def main():
         if operation in range(1, 7):
             calculate(num1, num2, operation)
         elif operation == 7:
-            num1 = int(input('Give the first number: '))
-            num2 = int(input('Give the second number: '))
+            num1 = get_numbers()
+            num2 = get_numbers()
         else:
             print('Thank you!')
             break
