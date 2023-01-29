@@ -1,4 +1,4 @@
-# Chapter 10 Exercise 1-3
+# Chapter 9 Exercise 1-3
 
 class Player():
     """Player-class: stores data on team colors and points."""
