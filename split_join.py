@@ -4,7 +4,7 @@
 def my_join(list, sep):
     result = ''
     for i in list:
-        result += i + sep
+        result += str(i) + sep
     return result[:-1]
 
 
@@ -19,8 +19,8 @@ def my_split(str, sep):
     return result
 
 
-sentence = 'This is a sentence'
+# sentence = 'This is a sentence'
 
-sentence = str(input('Please enter sentence:'))
-print(my_join(my_split(sentence, ' '), ','))
-print(my_join(my_split(sentence, ' '), '\n'))
+# sentence = str(input('Please enter sentence:'))
+# print(my_join(my_split(sentence, ' '), ','))
+# print(my_join(my_split(sentence, ' '), '\n'))

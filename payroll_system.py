@@ -10,14 +10,17 @@ class PayrollSystem:
 
 
 class Employee:
-    id = 0
-    name = ''
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
 
 
 class SalaryEmployee(Employee):
-    monthly_salary = 0
+    def __init__(self, id, name, monthly_salary):
+        super().__init__(id, name)
+        self.monthly_salary = monthly_salary
 
-    def calculate_salary(self):
+    def calculate_payroll(self):
         return self.monthly_salary
 
 
@@ -32,10 +35,7 @@ def main():
 
         salary = int(input('Please enter salary:'))
 
-        employee = SalaryEmployee()
-        employee.id = id
-        employee.name = name
-        employee.monthly_salary = salary
+        employee = SalaryEmployee(id, name, salary)
         employees.append(employee)
 
         id += 1
